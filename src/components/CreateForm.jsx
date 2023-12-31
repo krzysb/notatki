@@ -24,9 +24,10 @@ const CreateForm = ({ addNote }) => {
     });
   }
   const add = (e) => {
-    e.preventDefault(); 
-    addNote(note);
-    setNote({ title: "", body: "" });
+    if (note.body != "" && note.title != "") {
+      addNote(note);
+      setNote({ title: "", body: "" });
+    }
   };
 
   return (

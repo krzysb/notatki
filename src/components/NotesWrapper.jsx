@@ -6,7 +6,6 @@ export const NotesWrapper = ({ notes, setNotes }) => {
     const newNotes = notes.filter((note, index) => index != id);
     setNotes(newNotes);
   };
-
   return (
     <div className="wrap">
       {notes.map((note, id) => (
